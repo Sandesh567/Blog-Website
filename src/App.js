@@ -1,7 +1,17 @@
+import { useEffect, useState } from "react";
+import { faker } from "@faker-js/faker";
+
+
+function createRandomPost() {
+    return {
+        title: `${faker.hacker.adjective()} ${faker.hacker.noun()}`,
+        body: faker.hacker.phrase(),
+    };
+}
+
+
 
 function App() {
-
-
 
     // Whenever `isFakeDark` changes, we toggle the `fake-dark-mode` class on the HTML element (see in "Elements" dev tool).
     const [isFakeDark, setIsFakeDark] = useState(false);
@@ -32,3 +42,5 @@ function App() {
         </section>
     );
 }
+
+export default App;
