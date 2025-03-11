@@ -73,4 +73,27 @@ function SearchPosts() {
     );
 }
 
+
+function Results() {
+    const { posts } = usePosts();
+    return <p>🚀 {posts.length} atomic posts found</p>;
+}
+
+function Main() {
+    return (
+        <main>
+            <FormAddPost />
+            <Posts />
+        </main>
+    );
+}
+
+function Posts() {
+    return (
+        <section>
+            <List />
+        </section>
+    );
+}
+
 export default App;
