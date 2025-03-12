@@ -167,3 +167,12 @@ aside li {
   justify-content: space-between;
   align-items: center;
 }
+
+h2 + button {
+  margin-bottom: 24px;
+}
+
+aside li button {
+  padding: 4px 8px;
+  font-size: 14px;
+}
