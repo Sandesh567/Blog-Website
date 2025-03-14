@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import { faker } from "@faker-js/faker";
+import { PostProvider, usePosts } from "./PostContext";
+// import Test from "./Test";
+
+
 
 
 function createRandomPost() {
@@ -33,12 +37,12 @@ function App() {
                 {isFakeDark ? "☀️" : "🌙"}
             </button>
 
-            {/* <PostProvider>
+            <PostProvider>
                 <Header />
                 <Main />
                 <Archive />
                 <Footer />
-            </PostProvider> */}
+            </PostProvider>
         </section>
     );
 }
@@ -46,7 +50,7 @@ function App() {
 
 function Header() {
     //3) CONSUMING THE CONTEXT VALUE
-    // const { onClearPosts } = usePosts();
+    const { onClearPosts } = usePosts();
     return (
 
         <header>
@@ -63,7 +67,7 @@ function Header() {
 }
 
 function SearchPosts() {
-    // const { searchQuery, setSearchQuery } = usePosts();
+    const { searchQuery, setSearchQuery } = usePosts();
     return (
         <input
             value={searchQuery}
@@ -75,14 +79,14 @@ function SearchPosts() {
 
 
 function Results() {
-    // const { posts } = usePosts();
+    const { posts } = usePosts();
     return <p>🚀 {posts.length} atomic posts found</p>;
 }
 
 function Main() {
     return (
         <main>
-            {/* <FormAddPost /> */}
+            <FormAddPost />
             <Posts />
         </main>
     );
@@ -91,7 +95,7 @@ function Main() {
 function Posts() {
     return (
         <section>
-            {/* <List /> */}
+            <List />
         </section>
     );
 }
