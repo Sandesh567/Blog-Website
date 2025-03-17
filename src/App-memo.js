@@ -115,3 +115,11 @@ function Main({ posts, onAddPost }) {
     );
 }
 
+function Posts({ posts }) {
+    return (
+        <section>
+            <List posts={posts} />
+        </section>
+    );
+}
+
