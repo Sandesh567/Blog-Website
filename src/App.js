@@ -55,7 +55,7 @@ function Header() {
 
         <header>
             <h1>
-                <span>⚛️</span>The Atomic Blog
+                <span>⚛️</span>ParaByte
             </h1>
             <div>
                 <Results />
